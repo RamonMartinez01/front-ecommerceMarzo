@@ -89,5 +89,17 @@
 }
 
 @media (max-width: 740px) {
-    
+    .product__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2em;
+        height: 2em;
+    }
+    .bx {
+        object-fit: contain;
+    }
+    .bx.bxs-cart {
+        object-fit: contain;
+    }
 }

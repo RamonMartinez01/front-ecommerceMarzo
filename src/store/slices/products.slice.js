@@ -1,5 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios"
+import API_BASE_URL from "../../utils/apiConfig";
+
+
 
 const productsSlice = createSlice({
     name: 'products',
@@ -14,7 +17,7 @@ export const { setProducts } = productsSlice.actions
 export default productsSlice.reducer
 
 export const getProductsThunk = () => (dispatch) => {
-    const url = 'http://localhost:8080/products'
+    const url = `${API_BASE_URL}/products`
     axios.get(url)
     .then(res => dispatch(setProducts(res.data)))
     .catch(err => console.log(err))

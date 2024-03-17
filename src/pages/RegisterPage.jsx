@@ -2,8 +2,10 @@ import FormRegister from "../components/RegisterPage/FormRegister"
 
 const RegisterPage = () => {
   return (
-    <div>
-      <FormRegister />
+    <div className="formregister__container">
+      <FormRegister 
+     
+      />
     </div>
   )
 }

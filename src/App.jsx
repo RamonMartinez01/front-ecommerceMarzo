@@ -11,14 +11,17 @@ import PurchasesPage from './pages/PurchasesPage'
 
 function App() {
 
-
+  
   return (
    <div>
       <HeaderNav />
+     
+      
+
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/product/:id' element={<ProductIdPage />} />
-        <Route path='/register' element={<RegisterPage />} />
+        <Route path='/register'  element={<RegisterPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route element={<ProtectedRoutes />}>
           <Route path='/cart' element={<ProductCartPage />} />
