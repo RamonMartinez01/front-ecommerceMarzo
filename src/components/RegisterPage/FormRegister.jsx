@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import useAuth from "../../hooks/useAuth"
 import './styles/FormRegister.css'
 
-const FormRegister = ({ toggleRegister, toggleLogin, closeRegister }) => {
+const FormRegister = () => {
 
     const { register, handleSubmit, reset } = useForm()
 
@@ -12,15 +12,12 @@ const FormRegister = ({ toggleRegister, toggleLogin, closeRegister }) => {
 
     const submit = data => {
         registerUser(data) 
-        closeRegister();// Set showRegister to false
         navigate('/login');
        
     }
 
     const goToLogin = () => { 
-        toggleLogin();// Set showRegister to false
         navigate('/login'); // Navigate to login page
-       
     }
 
 

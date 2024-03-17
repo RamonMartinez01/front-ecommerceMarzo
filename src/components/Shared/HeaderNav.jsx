@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import './Styles/HeaderNavStyles.css'
 import { useState } from "react";
 
-const HeaderNav = ({ showRegister, showLogin, toggleRegister, toggleLogin }) => {
+const HeaderNav = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -29,8 +29,8 @@ const HeaderNav = ({ showRegister, showLogin, toggleRegister, toggleLogin }) => 
           <button className="header__dropdown-btn" onClick={toggleDropdown}><i className='bx bx-menu' ></i></button>
           <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
             <ul className="dropdown-menu">
-              <li className="menu-li-dropdown"><button onClick={toggleRegister}>Register</button></li>
-              <li className="menu-li-dropdown"><button onClick={toggleLogin} >Log in</button></li>
+              <li className="menu-li-dropdown"><Link to='/register'>Register</Link></li>
+              <li className="menu-li-dropdown"><Link to='/login'>Log in</Link></li>
               <li className="menu-li-dropdown"><Link to='/purchases'>Mis Compras</Link></li>
             </ul>
           </div>
