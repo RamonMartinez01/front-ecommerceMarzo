@@ -5,7 +5,7 @@ import ProductCard from '../components/HomePage/ProductCard';
 import FilterCategory from '../components/HomePage/FilterCategory'
 import FilterPrice from '../components/HomePage/FilterPrice';
 import './styles/HomePage.css'
-import { div } from '@tensorflow/tfjs';
+
 
 const HomePage = () => {
 

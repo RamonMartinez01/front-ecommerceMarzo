@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
     dispatch(addProductToCartThunk(product.id, 1))
   }
 
- //console.log(product?.id);
+ //console.log(product);
   return (
     <article className="product" onClick={handleNavigate}>
       <header className="product__header">

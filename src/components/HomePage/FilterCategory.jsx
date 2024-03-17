@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import useFetch from "../../hooks/useFetch"
+import API_BASE_URL from "../../utils/apiConfig";
 
 const FilterCategory = ({ setCategorySelected }) => {
 
   const [ categories, getCategories ] = useFetch()
   useEffect(() => {
-    const url = 'http://localhost:8080/categories'
+    const url = `${API_BASE_URL}/categories`
     getCategories(url)
   }, []);
 
