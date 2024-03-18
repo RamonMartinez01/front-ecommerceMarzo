@@ -1,0 +1,83 @@
+.prod__container {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 0;
+  }
+  
+  .prod__header {
+    text-align: center;
+  }
+  
+  .prod__img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .prod__article {
+    margin-top: 20px;
+  }
+  .prod__title-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .prod__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0a1553;
+  }
+  
+  .prod__quantity {
+    font-size: 16px;
+    font-weight: bold;
+    color: #6c757d;
+    padding-right: 1em;
+  }
+  
+  .prod__price-div {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .prod__price-title {
+    font-weight: bold;
+    color: #0a1553;
+  }
+  
+  .prod__price-media {
+    font-size: 18px;
+    color: #0a1553;
+  }
+
+  .prod__price-media::before {
+    content: '$';
+    margin-right: 0.3em;
+  }
+  
+  .prod__delete-btn {
+    background-color: #ababab;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    height: 3.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .prod__delete-btn i {
+    font-size: 20px;
+  }
+  
+  .prod__delete-btn:hover {
+    background-color: #c82333;
+  }

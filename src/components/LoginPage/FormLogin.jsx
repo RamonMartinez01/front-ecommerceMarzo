@@ -2,18 +2,25 @@ import { useForm } from "react-hook-form"
 import useAuth from "../../hooks/useAuth"
 import './styles/FormLogin.css'
 
-const FormLogin = () => {
+const FormLogin = ({ toggleLoginPage }) => {
 
   const { register, handleSubmit, reset } =useForm()
-        //loginUser
+        
   const { loginUser } = useAuth()
 
   const submit = (data) => {
-      loginUser(data)
-  }
+    toggleLoginPage()
+    loginUser(data)
+  };
+  const handleClose = () => {
+    toggleLoginPage(); // Close the login form
+  };
 
   return (
     <section className="formlogin__modal">
+       <span onClick={handleClose} className="close-formlogin-btn">
+          <button ><i className='bx bx-x'></i></button>
+       </span>
       <form className="formlogin__form" onSubmit={handleSubmit(submit)}>
         <label >
           <span>Email </span>

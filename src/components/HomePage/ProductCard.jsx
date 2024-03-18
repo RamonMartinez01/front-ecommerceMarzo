@@ -1,26 +1,53 @@
+import { useEffect, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { addProductToCartThunk } from "../../store/slices/cart.slice"
 import { useDispatch } from "react-redux"
 import './styles/ProductCard.css'
 
+
 const ProductCard = ({ product }) => {
-
+  const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate()
-
+  const dispatch = useDispatch()
+  
   const handleNavigate = () => {
     navigate(`/product/${product.id}`)
   }
-
-  const dispatch = useDispatch()
 
   const handleAddToCart = e => {
     e.stopPropagation()
     dispatch(addProductToCartThunk(product.id, 1))
   }
 
- //console.log(product);
-  return (
-    <article className="product" onClick={handleNavigate}>
+  useEffect(() => {
+    const handleScroll = () => {
+      const { top, bottom } = productRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Check if the product element is in the viewport
+      if (top < windowHeight && bottom > 0) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial visibility
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const productRef = useRef(null);
+
+
+   return (
+    <article className={`product ${isVisible ? 'visible' : ''}`}
+      ref={productRef}
+      onClick={handleNavigate}
+    >
       <header className="product__header">
 
         <img className="product__img product__img01" src={product?.imageUrl} alt="" />

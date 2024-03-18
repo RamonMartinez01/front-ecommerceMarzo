@@ -1,9 +1,9 @@
 import FormLogin from "../components/LoginPage/FormLogin"
 
-const LoginPage = () => {
+const LoginPage = ({ toggleLoginPage }) => {
   return (
     <div>
-      <FormLogin/>
+      <FormLogin toggleLoginPage={toggleLoginPage}/>
     </div>
   )
 }

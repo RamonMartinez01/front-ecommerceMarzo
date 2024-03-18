@@ -13,6 +13,30 @@
     padding-top: 3em;
     margin-top: 4.47em;
 }
+/*--close button--*/
+.close-formlogin-btn {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+}
+
+.close-formlogin-btn button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.close-formlogin-btn button i {
+    color: #001797; /* Adjust as needed */
+    font-size: 24px;
+}
+
 .formlogin__form {
     background-color: rgb(177, 224, 253);
     width: 87%;

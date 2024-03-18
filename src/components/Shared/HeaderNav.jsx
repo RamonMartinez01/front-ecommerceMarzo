@@ -2,21 +2,29 @@ import { Link } from "react-router-dom"
 import './Styles/HeaderNavStyles.css'
 import { useState } from "react";
 
-const HeaderNav = () => {
+const HeaderNav = ({ toggleRegisterPage, toggleLoginPage }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+  const handleRegisterClick = () => {
+    toggleRegisterPage();
+    setIsDropdownOpen(false); // Close dropdown when Register is clicked
+  };
 
+  const handleLoginClick = () => {
+    
+    toggleLoginPage();
+  }
 
   return (
     <section>
       <header className="header__nav">
         <h1 className="header__title"><Link to='/'>e-commerce</Link></h1>
         <ul className="header__menu-ul">
-          <li className="header__menu-li"><Link to='/register'>Register</Link></li>
-          <li className="header__menu-li"><Link to='/login'>Log in</Link></li>
+          <li className="header__menu-li"><button onClick={handleRegisterClick}>Register</button></li>
+          <li className="header__menu-li"><button onClick={handleLoginClick}>Login</button></li>
           <li className="header__menu-li"><Link to='/cart'>Carrito</Link></li>
           <li className="header__menu-li"><Link to='/purchases'>Mis Compras</Link></li>
         </ul>
@@ -29,8 +37,8 @@ const HeaderNav = () => {
           <button className="header__dropdown-btn" onClick={toggleDropdown}><i className='bx bx-menu' ></i></button>
           <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
             <ul className="dropdown-menu">
-              <li className="menu-li-dropdown"><Link to='/register'>Register</Link></li>
-              <li className="menu-li-dropdown"><Link to='/login'>Log in</Link></li>
+              <li className="menu-li-dropdown"><button onClick={handleRegisterClick}>Register</button></li>
+              <li className="menu-li-dropdown"><button onClick={handleLoginClick}>Login</button></li>
               <li className="menu-li-dropdown"><Link to='/purchases'>Mis Compras</Link></li>
             </ul>
           </div>

@@ -1,0 +1,85 @@
+.noaccount__modal {
+    background-color: rgba(0, 0, 0, 0.371);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 3em;
+    margin-top: 4.47em;
+}
+.close-noaccount-btn {
+    border: black solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+}
+.close-noaccount-btn button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+}
+
+.noaccount__article {
+    background-color: rgb(177, 224, 253);
+    width: 87%;
+    height:auto;
+    border-radius: 20px;
+    margin-top: 0.5em;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: safe;
+    gap: 2em;
+}
+.noaccount__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1.2em;
+}
+.noaccount__title-1 {
+    
+    text-align: center;
+}
+.noaccount__title-p {
+    
+    text-align: center;
+   
+}
+
+.noaccount__btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 30%;
+    gap: 1.5em;
+    margin-bottom: 1.2em;
+}
+.noaccount__btns button { 
+    background-image: linear-gradient(to right, #5f9fff, #55c0e7);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
