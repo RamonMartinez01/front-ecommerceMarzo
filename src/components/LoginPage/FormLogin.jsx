@@ -4,8 +4,8 @@ import './styles/FormLogin.css'
 
 const FormLogin = ({ toggleLoginPage }) => {
 
-  const { register, handleSubmit, reset } =useForm()
-        
+  const { register, handleSubmit, reset } = useForm()
+
   const { loginUser } = useAuth()
 
   const submit = (data) => {
@@ -17,23 +17,24 @@ const FormLogin = ({ toggleLoginPage }) => {
   };
 
   return (
-    <section className="formlogin__modal">
-       <span onClick={handleClose} className="close-formlogin-btn">
+
+      <section className="formlogin__modal">
+        <span onClick={handleClose} className="close-formlogin-btn">
           <button ><i className='bx bx-x'></i></button>
-       </span>
-      <form className="formlogin__form" onSubmit={handleSubmit(submit)}>
-        <label >
-          <span>Email </span>
-          <input {...register('email')} type="text" />
-        </label>
-        <label >
-          <span>Password </span>
-          <input {...register('password')} type="text" />
-        </label>
-        <button className="formlogin__btn ">Login</button>
-      </form>
-    </section>
-  )
+        </span>
+        <form className="formlogin__form" onSubmit={handleSubmit(submit)}>
+          <label >
+            <span>Email </span>
+            <input {...register('email')} type="text" />
+          </label>
+          <label >
+            <span>Password </span>
+            <input {...register('password')} type="text" />
+          </label>
+          <button className="formlogin__btn ">Login</button>
+        </form>
+      </section>
+    )
 }
 
 export default FormLogin

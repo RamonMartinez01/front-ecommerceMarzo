@@ -31,6 +31,10 @@
 .cart__product__footer {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
   
 .cart__product__total {

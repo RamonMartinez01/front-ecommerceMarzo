@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import './styles/NoAccountPage.css'
 
-const NoAccountPage = () => {
+const NoAccountPage = ({  toggleRegisterPage, toggleLoginPage }) => {
 
     const navigate = useNavigate()
     const handleClose = () => {
@@ -19,8 +19,14 @@ const NoAccountPage = () => {
                     <p className="noaccount__title-p">Debes <br /> <strong>acceder a tu cuenta</strong> <br />antes de ir a tu carrito de compras!</p>
                 </div>
                 <div className="noaccount__btns">
-                    <button className="noaccount__btn-regiser">Registrarme</button>
-                    <button className="noaccount__btn-login">Log in</button>
+                <button className="noaccount__btn-regiser" onClick={() => {
+                        toggleRegisterPage(); // Call toggleRegisterPage function
+                        handleClose(); // Close NoAccountPage component
+                    }}>Registrarme</button>
+                    <button className="noaccount__btn-login" onClick={() => {
+                        toggleLoginPage();
+                        handleClose();
+                    }}>Log in</button>
                 </div>
             </article>
            

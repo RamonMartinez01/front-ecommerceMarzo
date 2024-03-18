@@ -49,7 +49,9 @@ const toggleLoginPage = () => {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/product/:id' element={<ProductIdPage />} />
-        <Route path='/advertisment' element={<NoAccountPage />} />
+        <Route path='/advertisment' element={<NoAccountPage
+         toggleRegisterPage={toggleRegisterPage} 
+         toggleLoginPage={toggleLoginPage} />} />
         <Route element={<ProtectedRoutes />}>
           <Route path='/cart' element={<ProductCartPage />} />
           <Route path='/purchases' element={<PurchasesPage />} />

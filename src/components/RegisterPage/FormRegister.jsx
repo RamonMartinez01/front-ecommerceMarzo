@@ -35,32 +35,32 @@ const FormRegister = ({ toggleRegisterPage, toggleLoginPage }) => {
             <form className="formpage__form" onSubmit={handleSubmit(submit)}>
                 <label >
                     <span>First Name </span>
-                    <input {...register('firstName')} type="text" />
-                    {errors.firstName && <span>This field is required</span>}
+                    <input {...register('firstName', { required: true })} type="text" />
+                    {errors.firstName && <span className="span__error">This field is required</span>}
                 </label>
                 <label>
                     <span>Last Name </span>
-                    <input {...register('lastName')} type="text" />
-                    {errors.lastName && <span>This field is required</span>}
+                    <input {...register('lastName', { required: true })} type="text" />
+                    {errors.lastName && <span className="span__error">This field is required</span>}
                 </label>
                 <label>
                     <span>Email </span>
-                    <input {...register('email')} type="text" />
-                    {errors.email && <span>This field is required</span>}
+                    <input {...register('email', { required: true })} type="text" />
+                    {errors.email && <span className="span__error">This field is required</span>}
                 </label>
                 <label>
                     <span>Password </span>
-                    <input {...register('password')} type="text" />
-                    {errors.password && <span>This field is required</span>}
+                    <input {...register('password', { required: true })} type="password" />
+                    {errors.password && <span className="span__error">This field is required</span>}
                 </label>
                 <label>
                     <span>Phone </span>
-                    <input {...register('phone')} type="text" />
-                    {errors.phone && <span>This field is required</span>}
+                    <input {...register('phone', { required: true })} type="text" />
+                    {errors.phone && <span className="span__error">This field is required</span>}
                 </label>
-                <button className="formregister__btn">Rregister</button>
+                <button type="submit" className="formregister__btn">Rregister</button>
                 <span className="formregister__btn-span">Ya tienes una cuenta?</span>
-                <button className="formregister__btn-login" onClick={goToLogin}> Then log in!</button> 
+                <button type="button" className="formregister__btn-login" onClick={goToLogin}> Then log in!</button> 
             </form>
            
         </section>
