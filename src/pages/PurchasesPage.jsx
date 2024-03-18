@@ -14,7 +14,7 @@ const PurchasesPage = () => {
         getPurchases(url, getConfigToken())
     }, [])
     
-    console.log(purchases);
+    
 
   return (
     <div className="purchase__containter">
