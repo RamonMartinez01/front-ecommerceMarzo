@@ -1,11 +1,15 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { addProductToCartThunk } from "../../store/slices/cart.slice"
 import { useDispatch } from "react-redux"
 import './styles/ProductInfo.css'
 
+
 const ProductInfo = ({ product }) => {
 
     const [quantity, setQuantity] = useState(1)
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     const handleMinus = () => {
         if(quantity - 1 >= 1) {
@@ -17,9 +21,13 @@ const ProductInfo = ({ product }) => {
         setQuantity(quantity + 1)
     }
     
-    const dispatch = useDispatch()
     const handleAddToCart = () =>{
-        dispatch(addProductToCartThunk(product.id, quantity))
+        const token = localStorage.getItem('token')
+        if (token) {
+            dispatch(addProductToCartThunk(product.id, quantity))
+        } else {
+            navigate('/no-account')
+        }
     }
 
   return (

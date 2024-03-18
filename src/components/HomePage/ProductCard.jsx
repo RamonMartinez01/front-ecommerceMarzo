@@ -16,7 +16,12 @@ const ProductCard = ({ product }) => {
 
   const handleAddToCart = e => {
     e.stopPropagation()
-    dispatch(addProductToCartThunk(product.id, 1))
+    const token = localStorage.getItem('token')
+    if(token) {
+      dispatch(addProductToCartThunk(product.id, 1));
+    } else {
+      navigate('/no-account')
+    }
   }
 
   useEffect(() => {
