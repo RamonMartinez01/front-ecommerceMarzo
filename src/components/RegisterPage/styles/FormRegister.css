@@ -11,14 +11,40 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 3em;
-    margin-top: 4.47em;
+    padding-top: 8em;
+    position: relative;
+}
+
+/*close buton*/
+.close-formpage-btn {
+    position: absolute;
+    top: 5em;  /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    border: rgb(196, 228, 248) solid;
+    border-radius: 50%;
+}
+
+.close-formpage-btn button {
+    background-color: rgb(196, 228, 248);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+}
+.close-formpage-btn button i {
+    color: #001797; /* Adjust as needed */
+    font-size: 24px;
 }
 .formpage__form {
     background-color: rgb(177, 224, 253);
     width: 87%;
     height:auto;
-    
+    margin-top: 0.5em;
     border-radius: 20px;
     padding: 10px;
     display: flex;
@@ -29,6 +55,8 @@
 .formpage__form label {
     display: flex; /* Align label and input horizontally */
     align-items: center; /* Vertically center label and input */
+    position: relative;
+    margin-bottom: 1em;
 }
 
 .formpage__form label span {
@@ -40,6 +68,13 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+.span__error{
+    position: absolute;
+    bottom: -20px; /* Adjust this value to position the error message */
+    left: 35%;
+    color: red;
+    font-size: 12px;
 }
 .formregister__btn {
     background-image: linear-gradient(to right, #5f9fff, #5fd4ff);

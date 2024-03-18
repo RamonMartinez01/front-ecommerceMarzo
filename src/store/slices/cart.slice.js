@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import getConfigToken from "../../utils/getConfigToken";
+import API_BASE_URL from "../../utils/apiConfig";
 
 const cartSlice = createSlice({
     name: 'cart',
@@ -19,7 +20,7 @@ export const { addToCart, removeFromCart, setCart } = cartSlice.actions
 export default cartSlice.reducer
 
 //baseUrl funciona para los endpoint con /productscart (sin necesiad de id) 
-const baseUrl = 'http://localhost:8080/productscart'
+const baseUrl = `${API_BASE_URL}/productscart`
 
 export const getCartThunk = () => (dispatch) => {
     const url = `${baseUrl}`

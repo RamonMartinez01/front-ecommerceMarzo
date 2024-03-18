@@ -6,23 +6,23 @@ import { useEffect } from "react"
 import SliderImgs from "../components/ProductIdPage/SliderImgs"
 //import SimilarProduct from "../components/ProductIdPage/SimilarProduct"
 import '../components/ProductIdPage/styles/ProductIdP.css'
-
+import API_BASE_URL from "../utils/apiConfig"
 
 
 const ProductIdPage = () => {
   const { id } = useParams()
 
-  const [ prod, getProduct ] = useFetch()
+  const [ prod, getProd ] = useFetch()
 
  useEffect(() => {
-  const url = `http://localhost:8080/products/${id}`
-  getProduct(url)
+  const url = `${API_BASE_URL}/products/${id}`
+  getProd(url)
  }, [id])
 
  const [ products, getProducts ] = useFetch()
 
  useEffect(() => {
-  const url = `http://localhost:8080/products`
+  const url = `${API_BASE_URL}/products`
   getProducts(url)
  }, [id])
 

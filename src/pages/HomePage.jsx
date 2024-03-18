@@ -19,7 +19,7 @@ const HomePage = () => {
     to: Infinity,
   })
 
-  const products = useSelector( store => store.products)
+  const products = useSelector(store => store.products)
 
   const dispatch = useDispatch()
 
@@ -41,59 +41,38 @@ const HomePage = () => {
     //filtrado por nombre
     const filterName = prod.title.toLowerCase().includes(nameValue)
     //filtrado por categoria
-    const filterCategory = categorySelected === 'all' ? true : categorySelected === prod.category.id; 
+    const filterCategory = categorySelected === 'all' ? true : categorySelected === prod.category.id;
     // filtrado por precio 
     const priceProduct = +prod.price;
     const filterPrice = priceRange.from <= priceProduct && priceProduct <= priceRange.to;
-   return filterName && filterCategory && filterPrice;
+    return filterName && filterCategory && filterPrice;
   }
+  //console.log(products);
 
- //console.log(priceRange);
-  return (
-    <div>  
+   return (
+    <div>
       <div className='home__container'>
         <div className='div__input-home'>
           <input className='input-home' ref={inputName} onChange={handleInputName} type="text" />
           <span className='home-search' onClick={handleSearch}><i className='bx bx-search-alt-2'></i></span>`
         </div>
-        <div>
-          <h2>Filters</h2>
+        <div className='home__filter'>
+          <h2 className='home__filter'><i className='bx bx-filter-alt' ></i></h2>
           <FilterPrice setPriceRange={setPriceRange} />
-          <FilterCategory setCategorySelected={setCategorySelected}/>
+          <FilterCategory setCategorySelected={setCategorySelected} />
         </div>
         <div className='product-container'>
           {
             products?.filter(callbackFilter).map((prod) => (
-              <ProductCard 
+              <ProductCard
                 key={prod.id}
                 product={prod}
               />
             ))
           }
         </div>
+      
       </div>
-
-      <div className='home__container-media'>
-      <div className='div__input-home-media'>
-        <input className='input-home-media' ref={inputName} onChange={handleInputName} type="text" />
-        <span className='home-search-media' onClick={handleSearch}><i className='bx bx-search-alt-2'></i></span>`
-      </div>
-      <div className='home__filter-media'>
-        <h2 className='home__filter-media'><i className='bx bx-filter-alt' ></i></h2>
-        <FilterPrice setPriceRange={setPriceRange} />
-        <FilterCategory setCategorySelected={setCategorySelected}/>
-      </div>
-      <div className='product-container-media'>
-        {
-          products?.filter(callbackFilter).map((prod) => (
-            <ProductCard 
-              key={prod.id}
-              product={prod}
-            />
-          ))
-        }
-      </div>
-    </div>
     </div>
   )
 }

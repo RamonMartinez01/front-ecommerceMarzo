@@ -1,15 +1,20 @@
+import './styles/PurchaseCard.css'
 
 const PurchaseCard = ({ purchase }) => {
 
 
   return (
-    <article>
-        <header>
-            <img src={purchase.product.images[0].url} alt="" />
+    <article className='purchasescard__container'>
+        <header className='purchasescard__header'>
+            <img className='purchasescard__img' src={purchase.product.images[0].url} alt="" />
         </header>
-        <h3>{purchase.product.title}</h3>
-        <span>{purchase.quantity}</span>
-        <div>{purchase.product.price}</div>
+        <div className='purchasescard__info'>
+          <h3 className='purchasescard__h3'>{purchase.product.title}</h3>
+          <div className='purchasecard__price-div'>
+            <span className='purchasescard__quantity'>{purchase.quantity}</span>
+            <div className='purchasescard__price'>{purchase.product.price}</div>
+          </div>
+        </div>
     </article>
   )
 }
