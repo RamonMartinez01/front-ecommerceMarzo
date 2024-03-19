@@ -6,7 +6,7 @@ const ProtectedRoutes = () => {
   if(localStorage.getItem("token")) {
      return <Outlet />
   } else {
-    return <Navigate to='/advertisment'/>
+    return <Navigate to='/no-account'/>
   }
 
 }
