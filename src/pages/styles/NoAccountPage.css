@@ -13,14 +13,14 @@
     padding-top: 8em;
 }
 .close-noaccount-btn {
-    border: rgb(196, 228, 248) solid;
+    border: #b9b5ed;
     border-radius: 50%;
     position: absolute;
     top: 5em; 
     right: 10px; 
 }
 .close-noaccount-btn button {
-    background-color: rgb(196, 228, 248);
+    background-color: #F2F1FF;
     border: none;
     cursor: pointer;
     padding: 0;
@@ -73,9 +73,9 @@
     margin-bottom: 1.2em;
 }
 .noaccount__btns button { 
-    background-image: linear-gradient(to right,#F2F1FF, #2C2966);
+    background-image: linear-gradient(to right,#D5D3EF, #2C2966);
     color: #fff;
-    border: none;
+    border-color: #b9b5ed;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;

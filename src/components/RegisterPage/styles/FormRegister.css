@@ -20,12 +20,12 @@
     position: absolute;
     top: 5em;  /* Adjust as needed */
     right: 10px; /* Adjust as needed */
-    border: rgb(196, 228, 248) solid;
+    border: #b9b5ed;
     border-radius: 50%;
 }
 
 .close-formpage-btn button {
-    background-color: rgb(196, 228, 248);
+    background-color:  #F2F1FF;
     border: none;
     cursor: pointer;
     padding: 0;

@@ -19,12 +19,12 @@
     position: absolute;
     top: 5em; /* Adjust as needed */
     right: 10px; /* Adjust as needed */
-    border: rgb(196, 228, 248) solid;
+    border: #b9b5ed;
     border-radius: 50%;
 }
 
 .close-formlogin-btn button {
-    background-color: rgb(196, 228, 248);
+    background-color: #F2F1FF;
     border: none;
     cursor: pointer;
     padding: 0;
@@ -69,7 +69,8 @@
     border-radius: 5px;
 }
 .formlogin__btn {
-    background-image: linear-gradient(to right, #F2F1FF, #2C2966);
+    background-image: linear-gradient(to right, #D5D3EF, #2C2966);
+    border-color: #b9b5ed;
     font-size: 16px;
     height: 2.5em;
     border-radius: 0.8em;
