@@ -33,7 +33,7 @@
 }
 
 .noaccount__article {
-    background-color: #E0DEFE;
+    background-color: #F2F1FF;
     width: 87%;
     height:auto;
     border-radius: 20px;
@@ -73,7 +73,7 @@
     margin-bottom: 1.2em;
 }
 .noaccount__btns button { 
-    background-image: linear-gradient(to right,#4E4C70, #2C2966);
+    background-image: linear-gradient(to right,#F2F1FF, #2C2966);
     color: #fff;
     border: none;
     border-radius: 5px;
