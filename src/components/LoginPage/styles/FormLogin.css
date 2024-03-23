@@ -41,7 +41,7 @@
 }
 
 .formlogin__form {
-    background-color: rgb(177, 224, 253);
+    background-color: #E0DEFE;
     width: 87%;
     height:auto;
     margin-top: 0.5em;
@@ -69,16 +69,14 @@
     border-radius: 5px;
 }
 .formlogin__btn {
-    background-image: linear-gradient(to right, #5f9fff, #5fd4ff);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
+    background-image: linear-gradient(to right, #4E4C70, #2C2966);
     font-size: 16px;
+    height: 2.5em;
+    border-radius: 0.8em;
     transition: background-color 0.3s ease;
+    color: white;    
 }
 
 .formlogin__btn:hover {
-    background-image: linear-gradient(to right, #5fd4ff, #5f9fff);
+    background-image: linear-gradient(to right, #2C2966, #4E4C70);
 }
