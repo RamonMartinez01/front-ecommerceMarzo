@@ -13,14 +13,14 @@
     justify-content: center;
 }
 .input-home {
-    background-color: azure;
+    background-color: white;
     height: 2em;
     width: 25%;
 } 
 .home-search {
     width: 2em;
     height: 1.5em;
-    background-color: azure;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +57,7 @@
         justify-content: center;
     }
     .input-home {
-        background-color: azure;
+        background-color: white;
         height: 2em;
         width: 60%;
     } 
