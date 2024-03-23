@@ -35,6 +35,7 @@ const HeaderNav = ({ toggleRegisterPage, toggleLoginPage }) => {
         <div className="header__actions">
           <div className="header__cart"><Link to='/cart'><i className='bx bx-cart' ></i></Link></div>
           <button className="header__dropdown-btn" onClick={toggleDropdown}><i className='bx bx-menu' ></i></button>
+          
           <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
             <ul className="dropdown-menu">
               <li className="menu-li-dropdown register"><button onClick={handleRegisterClick}>Register</button></li>

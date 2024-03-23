@@ -46,7 +46,7 @@ const ProductCard = ({ product }) => {
   }, []);
 
   const productRef = useRef(null);
-
+console.log(product?.images);
 
    return (
     <article className={`product ${isVisible ? 'visible' : ''}`}
@@ -55,8 +55,8 @@ const ProductCard = ({ product }) => {
     >
       <header className="product__header">
 
-        <img className="product__img product__img01" src={product?.imageUrl} alt="" />
-        <img className="product__img product__img02" src={product?.imageUrl2} alt="" />
+        <img className="product__img product__img01" src={product?.images[0].url} alt="" />
+        <img className="product__img product__img02" src={product?.images[1].url} alt="" />
       </header>
       <section className="product__body">
         <h4 className="product__brand">{product?.brand}</h4>
@@ -67,6 +67,9 @@ const ProductCard = ({ product }) => {
           <span className="product__price__value">{product?.price}</span>
         </div>
         <button className="product__btn" onClick={handleAddToCart}>
+          <i className='bx bxs-cart'></i>
+        </button>
+        <button className="product__btn-2" onClick={handleAddToCart}>
           <i className='bx bxs-cart'></i>
         </button>
       </section>
