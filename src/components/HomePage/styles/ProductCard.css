@@ -81,8 +81,10 @@
     border-radius: 10%;
     font-size: 1.3rem;
     border: none;
-    background-color: #D19B01;
-    /**/
+    background-color: #9dcfa2;
+    /*
+    #D19B01 naranja del bot;on
+    */
 }
 .product__btn-2 {
     display: flex;
@@ -96,7 +98,7 @@
     border-radius: 10%;
     font-size: 1.3rem;
     border: none;
-    background-color: #D19B01;
+    background-color: #9dcfa2;
 }
 .product__btn-2 i {
     color: white;
