@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #A2A2A7;
+    background-color: #d6d6d6;
     color: white;
     padding: 10px;
     z-index: 2;
@@ -59,8 +59,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #A2A2A7;
+        background-color: #d6d6d6;
         /*
+        d6d6d6
+        #ddddef
         #354E82 gris
         #032263 azul
         */
