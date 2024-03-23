@@ -81,8 +81,31 @@
     border-radius: 10%;
     font-size: 1.3rem;
     border: none;
-    background-color: #80D9FF;
-
+    background-color: #D19B01;
+    /**/
+}
+.product__btn-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 4.7em;
+    bottom: 1.3em;
+    width: 2em;
+    height: 2em;
+    border-radius: 10%;
+    font-size: 1.3rem;
+    border: none;
+    background-color: #D19B01;
+}
+.product__btn-2 i {
+    color: white;
+}
+.bx {
+    object-fit: contain;
+}
+.bx.bxs-cart {
+    object-fit: contain;
 }
 .product__btn:hover {
     filter: brightness(1.1);
