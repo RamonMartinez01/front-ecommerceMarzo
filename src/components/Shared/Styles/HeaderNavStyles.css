@@ -18,7 +18,7 @@
     font-size: xx-large;
   }
   .header__title a {
-    color: #354E82;
+    color: #032263 ;
   }
   .header__menu-ul {
     list-style-type: none;
@@ -59,12 +59,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #d6d6d6;
+        background-color: #E0DEFE;
         /*
-        d6d6d6
+        #E0DEFE barra
+        d6d6d6 barra
         #ddddef
         #354E82 gris
-        #032263 azul
+        #032263 azul titulo
         */
         color: white;
         padding: 10px;
@@ -168,7 +169,7 @@
         padding: 10px;
         text-align: center;
         text-decoration: none;
-        background-color: #007bff;
+        background-color: #032263;
         color: #fff;
         border: none;
         border-radius: 5px;
