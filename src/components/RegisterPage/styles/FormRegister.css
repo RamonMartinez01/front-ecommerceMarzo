@@ -41,7 +41,7 @@
     font-size: 24px;
 }
 .formpage__form {
-    background-color: rgb(177, 224, 253);
+    background-color: #E0DEFE;
     width: 87%;
     height:auto;
     margin-top: 0.5em;
@@ -77,7 +77,7 @@
     font-size: 12px;
 }
 .formregister__btn {
-    background-image: linear-gradient(to right, #5f9fff, #5fd4ff);
+    background-image: linear-gradient(to right, #2C2966, #4E4C70);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -88,7 +88,7 @@
 }
 
 .formregister__btn:hover {
-    background-image: linear-gradient(to right, #5fd4ff, #5f9fff);
+    background-image: linear-gradient(to right,#4E4C70, #2C2966);
 }
 
 .formregister__btn-span{
@@ -97,7 +97,7 @@
 }
 
 .formregister__btn-login {
-    background-image: linear-gradient(to right, #5f9fff, #5fd4ff);
+    background-image: linear-gradient(to right, #2C2966, #4E4C70);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -107,5 +107,5 @@
     transition: background-color 0.3s ease;
 }
 .formregister__btn-login:hover {
-    background-image: linear-gradient(to right, #5fd4ff, #5f9fff);
+    background-image: linear-gradient(to right, #4E4C70, #2C2966);
 }
