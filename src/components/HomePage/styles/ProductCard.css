@@ -86,7 +86,7 @@
     #D19B01 naranja del bot;on
     */
 }
-.product__btn-2 {
+/*.product__btn-2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,8 +99,8 @@
     font-size: 1.3rem;
     border: none;
     background-color: #9dcfa2;
-}
-.product__btn-2 i {
+}*/
+.product__btn i {
     color: white;
 }
 .bx {

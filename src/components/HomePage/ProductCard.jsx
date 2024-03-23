@@ -69,9 +69,6 @@ console.log(product?.images);
         <button className="product__btn" onClick={handleAddToCart}>
           <i className='bx bxs-cart'></i>
         </button>
-        <button className="product__btn-2" onClick={handleAddToCart}>
-          <i className='bx bxs-cart'></i>
-        </button>
       </section>
     </article>
   )
