@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import './Styles/HeaderNavStyles.css'
 import { useState } from "react";
+import ProfileUser from "./ProfileUser.jsx" 
+
 
 const HeaderNav = ({ toggleRegisterPage, toggleLoginPage }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -28,6 +30,9 @@ const HeaderNav = ({ toggleRegisterPage, toggleLoginPage }) => {
           <li className="header__menu-li"><Link to='/cart'>Carrito</Link></li>
           <li className="header__menu-li"><Link to='/purchases'>Mis Compras</Link></li>
         </ul>
+        <div>
+            <ProfileUser />
+        </div>
       </header>
 
       <header className="header__nav-query">
@@ -42,6 +47,9 @@ const HeaderNav = ({ toggleRegisterPage, toggleLoginPage }) => {
               <li className="menu-li-dropdown login"><button onClick={handleLoginClick}>Login</button></li>
               <li className="menu-li-dropdown purchases"><Link to='/purchases'>Mis Compras</Link></li>
             </ul>
+          </div>
+          <div className="profile__user-container">
+              <ProfileUser />
           </div>
         </div>
       </header>

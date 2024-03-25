@@ -186,6 +186,14 @@
       .menu-li-dropdown purchases {
         font-size: 1.1rem;
       }
+      .profile__user-container {
+        height: 100%;
+        background-color: #FFC541;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
      
     
 }
