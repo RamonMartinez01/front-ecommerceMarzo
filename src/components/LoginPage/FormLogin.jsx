@@ -31,7 +31,7 @@ const FormLogin = ({ toggleLoginPage }) => {
             <span>Password </span>
             <input {...register('password')} type="text" />
           </label>
-          <button className="formlogin__btn ">Login</button>
+          <button className="formlogin__btn ">Acceder</button>
         </form>
       </section>
     )
