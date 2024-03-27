@@ -41,38 +41,45 @@ const HomePage = () => {
     //filtrado por nombre
     const filterName = prod.title.toLowerCase().includes(nameValue)
     //filtrado por categoria
-    const filterCategory = categorySelected === 'all' ? true : categorySelected === prod.category.id;
+    const filterCategory = categorySelected === 'all' ? true : categorySelected === prod.categoryId;
     // filtrado por precio 
+    
     const priceProduct = +prod.price;
     const filterPrice = priceRange.from <= priceProduct && priceProduct <= priceRange.to;
     return filterName && filterCategory && filterPrice;
   }
-  //console.log(products);
+ 
 
    return (
-    <div>
-      <div className='home__container'>
-        <div className='div__input-home'>
-          <input className='input-home' ref={inputName} onChange={handleInputName} type="text" />
-          <span className='home-search' onClick={handleSearch}><i className='bx bx-search-alt-2'></i></span>`
-        </div>
-        <div className='home__filter'>
-          <h2 className='home__filter'><i className='bx bx-filter-alt' ></i></h2>
-          <FilterPrice setPriceRange={setPriceRange} />
-          <FilterCategory setCategorySelected={setCategorySelected} />
-        </div>
-        <div className='product-container'>
-          {
-            products?.filter(callbackFilter).map((prod) => (
-              <ProductCard
-                key={prod.id}
-                product={prod}
-              />
-            ))
-          }
-        </div>
-      
+    <div className='home__page'>
+      <div className='div__input-home'>
+        <input className='input-home' ref={inputName} onChange={handleInputName} type="text" />
+        <span className='home-search' onClick={handleSearch}><i className='bx bx-search-alt-2'></i></span>
       </div>
+      <section className='home__section'>
+        <div className='home__filter'>
+          
+          <div className='home__filterprice'>
+            <FilterPrice setPriceRange={setPriceRange} />
+          </div>
+          <hr className='home__hr' />
+          <div className='home__filtercategory'>
+            <FilterCategory setCategorySelected={setCategorySelected} />
+          </div>
+        </div>
+        <div className='home__container'>
+          <div className='product-container'>
+            {
+              products?.filter(callbackFilter).map((prod) => (
+                <ProductCard
+                  key={prod.id}
+                  product={prod}
+                />
+              ))
+            }
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

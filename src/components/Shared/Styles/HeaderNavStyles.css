@@ -7,31 +7,71 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #d6d6d6;
+    background-color: #E0DEFE;
     color: white;
     padding: 10px;
     z-index: 2;
   }
+  .title-profile {
+    margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
+  }
   .header__title {
-    margin: 0;
-    font-size: xx-large;
+    margin-left: 1.8em;
+    font-size: 2.3rem;
+  }
+  .profile__user-container {
+    height: 3.8em;
+    width: 3.8em;
+    background-color: #E0DEFE;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
   .header__title a {
     color: #032263 ;
+    text-decoration: none;
   }
   .header__menu-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
     font-weight: 600;
+    height: 100%;
   }
-
+  .header__menu-li a {
+    text-decoration: none; 
+    height: 95%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__menu-li button {
+    background-color: none;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+  }
   .header__menu-li {
-    display: inline-block;
-    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 5px 10px;
-    border: 1px solid transparent;
+    width: 7.6em;
+    height: 95%;
+    border-left:  #0a1553a4 solid 1px;
     transition: border-color 0.3s ease;
   }
   
@@ -43,6 +83,46 @@
     display: none;
   } 
 
+  /* Estilos para los botones y enlaces */
+.header__menu-li button,
+.header__menu-li a {
+  /*display: inline-block;*/
+  padding: 8px 16px; /* Ajusta el tamaño del padding según sea necesario */
+  text-decoration: none;
+  color: #032263;
+  border: 1px solid transparent; /* Añade un borde transparente a todos los elementos */
+  border-radius: 4px; /* Ajusta el radio del borde según sea necesario */
+  background-color: #E0DEFE; /* Fondo uniforme para todos los elementos */
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.header__menu-li button:focus,
+.header__menu-li a:focus {
+  outline: none; /* Quita el contorno de enfoque */
+}
+
+.header__menu-li button:hover,
+.header__menu-li a:hover {
+  background-color: #3a1eb4;
+  color: white;
+  border-color: #032263; /* Cambia el color del borde al hacer hover */
+}
+
+  /*Query -930px*/
+  @media (max-width: 930px) {
+    .title-profile {
+      margin-left: 0.5em;
+      
+    }
+    .header__title {
+      margin-left: 0.4em;
+      font-size: 1.8rem;
+    }
+    .header__menu-li {
+    /*display: inline-block;*/
+    padding: 4px 2px;
+    }
+  }
 
   /*Query -740*/
 
@@ -58,7 +138,7 @@
         height: 6em;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         background-color: #E0DEFE;
         /*
         #E0DEFE barra
@@ -80,6 +160,7 @@
         height: 100%;
         border-right: 1px solid rgba(0, 0, 0, 0.1); /* Add subtle border */
         padding-right: 10px; /* Add spacing */
+        margin-left: 0.45em;
     }
     .header__actions {
         display: flex;
@@ -87,10 +168,7 @@
         justify-content: center;
         width: 38%;
         height: 100%;
-        
     }
-
-  
     .header__cart {
         display: flex;
         align-items: center;
@@ -135,6 +213,7 @@
         color: #551A8B;
         font-size: 16px;
         cursor: pointer;
+        padding: 0;
     }
     .header__dropdown-btn a {
       width: 100%;
@@ -153,13 +232,12 @@
         position: absolute;        
         background-color: #f9f9f9;
         min-width: 160px;
-        
         z-index: 1;
         border: 1px solid #ccc;
         border-radius: 4px; /* Rounded corners */
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); /* Box shadow */
         top: calc(100% - 15px); 
-        right: 0;
+        right: 1.35em;
       }
   
       .menu-li-dropdown button, 
@@ -187,9 +265,9 @@
         font-size: 1.1rem;
       }
       .profile__user-container {
-        height: 100%;
-        background-color: #FFC541;
-        border-radius: 50%;
+        height: 3.2em;
+        width: 3.8em;
+        background-color: #E0DEFE;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -198,21 +276,30 @@
     
 }
 
-/*-----Media query 440-----*/
+/*-----Media query 480-----*/
 
-@media (max-width: 440px) {
+@media (max-width: 480px) {
 
   .header__title {
-    font-size: x-large;
+    font-size: 1.5rem;
   }
   .header__nav-query {
     height: 4.5em;
   }
 }
 
-@media (max-width: 324px) {
 
+
+/*-----Media query 380-----*/
+
+@media (max-width: 380px) {
   .header__title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    padding: 0;
+  }
+  .profile__user-container {
+    height: 2.7em;
+    width: 3.2em;
+
   }
 }
