@@ -34,33 +34,33 @@ const FormRegister = ({ toggleRegisterPage, toggleLoginPage }) => {
             </span>
             <form className="formpage__form" onSubmit={handleSubmit(submit)}>
                 <label >
-                    <span>First Name </span>
+                    <span>Nombre</span>
                     <input {...register('firstName', { required: true })} type="text" />
                     {errors.firstName && <span className="span__error">This field is required</span>}
                 </label>
                 <label>
-                    <span>Last Name </span>
+                    <span>Apellido</span>
                     <input {...register('lastName', { required: true })} type="text" />
                     {errors.lastName && <span className="span__error">This field is required</span>}
                 </label>
                 <label>
-                    <span>Email </span>
+                    <span>Correo</span>
                     <input {...register('email', { required: true })} type="text" />
                     {errors.email && <span className="span__error">This field is required</span>}
                 </label>
                 <label>
-                    <span>Password </span>
+                    <span>Contraseña</span>
                     <input {...register('password', { required: true })} type="password" />
                     {errors.password && <span className="span__error">This field is required</span>}
                 </label>
                 <label>
-                    <span>Phone </span>
+                    <span>Teléfono</span>
                     <input {...register('phone', { required: true })} type="text" />
                     {errors.phone && <span className="span__error">This field is required</span>}
                 </label>
-                <button type="submit" className="formregister__btn">Rregister</button>
+                <button type="submit" className="formregister__btn">Registrarse</button>
                 <span className="formregister__btn-span">Ya tienes una cuenta?</span>
-                <button type="button" className="formregister__btn-login" onClick={goToLogin}> Then log in!</button> 
+                <button type="button" className="formregister__btn-login" onClick={goToLogin}>Acceder a mi cuenta!</button> 
             </form>
            
         </section>

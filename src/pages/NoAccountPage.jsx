@@ -26,7 +26,7 @@ const NoAccountPage = ({  toggleRegisterPage, toggleLoginPage }) => {
                     <button className="noaccount__btn-login" onClick={() => {
                         toggleLoginPage();
                         handleClose();
-                    }}>Log in</button>
+                    }}>Acceder!</button>
                 </div>
             </article>
            

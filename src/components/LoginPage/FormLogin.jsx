@@ -24,14 +24,14 @@ const FormLogin = ({ toggleLoginPage }) => {
         </span>
         <form className="formlogin__form" onSubmit={handleSubmit(submit)}>
           <label >
-            <span>Email </span>
+            <span>Correo</span>
             <input {...register('email')} type="text" />
           </label>
           <label >
-            <span>Password </span>
+            <span>Contraseña</span>
             <input {...register('password')} type="text" />
           </label>
-          <button className="formlogin__btn ">Login</button>
+          <button className="formlogin__btn ">Acceder</button>
         </form>
       </section>
     )
