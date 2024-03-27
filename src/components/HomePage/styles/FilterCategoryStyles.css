@@ -1,0 +1,59 @@
+.filter__ctg-section {
+    position: relative;
+  }
+  
+  /* Estilos para el contenedor del botón */
+  .filter__ctg-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E0DEFE; /* Color de fondo */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilos para el título */
+  .filter__ctg-title {
+    color: #032263; /* Color del texto */
+    margin: 0;
+  }
+  
+  /* Estilos para el icono de flecha */
+  .filter__ctg-div i {
+    color: #032263; /* Color del icono */
+    font-size: 24px;
+  }
+  
+  /* Estilos para la lista de categorías */
+  .filter__ctg-ul {
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    top: 100%; /* Sitúa la lista debajo del botón */
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Color de fondo */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    display: none; /* Oculta la lista por defecto */
+  }
+  
+  /* Estilos para los elementos de la lista de categorías */
+  .filter__ctg-li {
+    padding: 10px 20px;
+    color: #333; /* Color del texto */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilos para los elementos de la lista de categorías cuando se pasa el mouse sobre ellos */
+  .filter__ctg-li:hover {
+    background-color: #f0bdbd; /* Cambia el color de fondo cuando se pasa el mouse */
+  }
+  
+  /* Estilos para mostrar la lista cuando el botón está activo */
+  .filter__ctg-section:hover .filter__ctg-ul {
+    display: block;
+  }

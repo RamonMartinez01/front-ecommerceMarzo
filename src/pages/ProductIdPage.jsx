@@ -33,28 +33,22 @@ const filteredProducts = products?.filter(product => product.id !== id);
 //console.log(filteredProducts);
   return (
     <div className="productinfo__container">
-      <section>
+      <section className="productinfo__product">
         <SliderImgs prod={prod} />
         <ProductInfo 
           product={prod}
         />
       </section>
-      <h2 className="productInfo-h2">Mas Productos Similares</h2>
-      <section className="productInfo__productsCard">
-      
-      
-        {filteredProducts?.map((product) => (
-              <ProductCard 
-              key={product.id}
-              product={product} />
-        ))}
-
-         {/* {
-            <SimilarProduct 
-            categoryId={product?.category.id} 
-            idProd={product?.id}
-         />}*/}
-      </section>
+      <div className="productinfo__section-down">
+        <h2 className="productInfo-h2">Mas Productos Similares</h2>
+        <section className="productInfo__productsCard">
+          {filteredProducts?.map((product) => (
+                <ProductCard 
+                key={product.id}
+                product={product} />
+          ))}
+        </section>
+      </div>
     </div>
   )
 }

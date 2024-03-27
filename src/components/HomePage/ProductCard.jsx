@@ -46,7 +46,7 @@ const ProductCard = ({ product }) => {
   }, []);
 
   const productRef = useRef(null);
-console.log(product?.images);
+
 
    return (
     <article className={`product ${isVisible ? 'visible' : ''}`}

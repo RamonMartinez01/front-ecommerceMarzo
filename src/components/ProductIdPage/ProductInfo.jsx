@@ -39,14 +39,14 @@ const ProductInfo = ({ product }) => {
         <footer className="productInfo__footer">
             <div className="productInfo__subtotal">
                 <span>Precio</span>
-                <span>{product?.price}</span>
+                <span>$ {product?.price}</span>
             </div>
             <div className="productInfo__counter">
                 <button className="productInfo__counter-minus" onClick={handleMinus}><i className='bx bx-minus' ></i></button>
                 <div className="productInfo__counter-quantity">{quantity}</div>
                 <button className="productInfo__counter-plus" onClick={handlePlus}><i className='bx bx-plus'></i></button>
             </div>
-            <button className="productInfo__btn-addtocart" onClick={handleAddToCart}>Add to cart</button>
+            <button className="productInfo__btn-addtocart" onClick={handleAddToCart}>Agregar al carrito</button>
         </footer>
     </article>
   )

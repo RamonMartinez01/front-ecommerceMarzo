@@ -1,0 +1,67 @@
+/* Estilos para el formulario */
+.filter__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+  .filter__title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Color del texto */
+  }
+  .filter__label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para los spans */
+  .filter__span {
+    position: relative;
+  }
+  .filter__span-price {
+    margin-right: 5px; /* Espacio entre el span de precio y el input */
+  }
+  
+  .filter__currency {
+    position: absolute;
+    left: 10px; /* Ajusta según sea necesario */
+    top: 50%; /* Ajusta según sea necesario */
+    transform: translateY(-50%);
+    color: #333; /* Color del signo de pesos */
+  }
+  
+  /* Estilos para los inputs */
+  .filter__input {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Estilos para los inputs cuando están enfocados */
+  .filter__input:focus {
+    border-color: #007bff; /* Cambia el color del borde cuando el input está enfocado */
+  }
+  
+  /* Estilos para el botón */
+  .fiter__btn {
+    width: 150px;
+    padding: 10px;
+    background-color: #FFC541;
+    color: #032263;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilos para el botón cuando está en hover */
+  .fiter__btn:hover {
+    background-color: #0056b3; /* Cambia el color de fondo cuando el botón está en hover */
+  }
